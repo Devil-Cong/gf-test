@@ -4,7 +4,7 @@
 ### iMembers
 
 #### 介绍
-* 采用flex布局，所以显示结果可以由挂在节点宽度控制一行显示多少个
+* 采用flex布局，所以显示结果可以由挂载节点宽度控制一行显示多少个
 * 头像图片加载失败会显示默认图片
 * 兼容CommonJS、AMD
 
@@ -13,11 +13,11 @@
 
 ```javascript
 var members = new iMembers({
-    el: '#member-lists', // 挂在的DOM节点，必传
+    el: '#member-lists', // 挂载的DOM节点，必传
     animation: true, // 是否使用动画，默认使用
     delay: 200, // 每个item动画间隔事件，当animation为true时候有效，单位ms
     title: '优秀员工', // 列表主标题，e.g., 员工，嘉宾
-    subtitle: '座右铭', // item父标签，e.g., 爱好，简介，座右铭
+    subtitle: '座右铭', // item副标题，e.g., 爱好，简介，座右铭
     data: [ // 列表展示的数据，必须是非空数组
         {
             name: 'dodolog', // 姓名
@@ -30,12 +30,12 @@ var members = new iMembers({
     }
 });
 ```
-具体API方法请看源码。
+具体[API](https://github.com/Devil-Cong/gf-test/blob/master/libs/iMembers/iMembers.js)方法请看源码。
 
 ### iAlbum
 
 #### 介绍
-* 实例挂在后不渲染大图，调用show方法后才渲染大图
+* 实例挂载后不渲染大图，调用show方法后才渲染大图
 * 显示多张大图，大图可水平拖拽
 * 兼容CommonJS、AMD
 
@@ -45,7 +45,7 @@ var members = new iMembers({
 ```javascript
 var album = new iAlbum({
     animation: true, // 是否使用动画，默认使用
-    introduce: true, // 是都显示简介
+    introduce: true, // 是否显示简介
     line: 5, // 简介文字行数，当introduce为true有效
     data: [ // 相册显示的数据，必须是非空数组
         {
@@ -62,7 +62,7 @@ var album = new iAlbum({
             // 可以有其他属性，e.g., 年龄，毕业院校
         }
     ],
-    descFormat: function (item) { // 简介显示内容的自定义格式化行数，非必传，返回格式化内容，默认格式化是name和desc
+    descFormat: function (item) { // 简介显示内容的自定义格式化函数，非必传，返回格式化内容，默认格式化是name和desc
         return '<span>' + item.name + '<span><span>' + item.age + '<span>';
     }
 });
@@ -71,4 +71,4 @@ var album = new iAlbum({
 // 也可通过其他属性操作显示，e.g., show('id', userId);
 album.show('name', 'dodolog');
 ```
-具体API方法请看源码。
+具体[API](https://github.com/Devil-Cong/gf-test/blob/master/libs/iAlbum/iAlbum.js)方法请看源码。
