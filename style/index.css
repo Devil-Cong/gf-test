@@ -1,0 +1,24 @@
+*{
+    padding:0;
+    margin:0;
+}
+body {
+    font-family: "Microsoft YaHei", "Arial Narrow", sans-serif;
+    color:#333;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.container {
+    min-width: 900px;
+    margin: 0 auto;
+    padding:0 30px;
+}
+
+#member-lists {
+    margin: 40px auto;
+    width: 900px;
+}
+
+
+
