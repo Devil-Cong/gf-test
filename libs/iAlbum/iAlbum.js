@@ -174,7 +174,7 @@
 
         /**
          * 隐藏关闭当前相册
-         * @private
+         * @public
          */
         hide: function () {
             var self = this;
